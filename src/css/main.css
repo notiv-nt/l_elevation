@@ -1,0 +1,391 @@
+ul,
+li {
+  padding: 0;
+  margin: 0;
+}
+@import url("//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic");
+html,
+body {
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-size: 13pt;
+  font-weight: 400;
+  line-height: 1.65em;
+  color: #808080;
+  width: 100%;
+  height: 100%;
+}
+header {
+  color: #fff;
+  font-weight: bold;
+  min-height: 450px;
+  background: #3a3347 url("../image/banner.svg") repeat-x 25% bottom;
+  background-size: 1125px 225px;
+}
+header .logo,
+header nav ul li a {
+  padding: 20px;
+}
+header .logo a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: inherit;
+}
+header nav ul {
+  list-style: none;
+}
+header nav ul li {
+  display: inline-block;
+  text-transform: uppercase;
+  position: relative;
+}
+header nav ul li ul.dropdown {
+  position: absolute;
+  display: none;
+  right: 0;
+  left: 0;
+  top: 100%;
+  background-color: #fff;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+header nav ul li ul.dropdown li {
+  display: block;
+  padding: 5px 10px;
+  color: #333;
+  font-size: 14px;
+  overflow: hidden;
+}
+header nav ul li ul.dropdown li a {
+  padding: 0;
+}
+header nav ul li ul.dropdown li:hover {
+  background-color: #e98b6c;
+}
+header nav ul li a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+header nav ul li a:hover i {
+  opacity: 1;
+}
+header nav ul li a i {
+  margin-right: 5px;
+  color: #fff;
+  opacity: 0.4;
+}
+header .banner {
+  color: inherit;
+  padding: 40px 0;
+  text-align: center;
+}
+header .banner h2,
+header .banner p {
+  line-height: 1.3em;
+}
+header .banner h2 {
+  font-size: 42px;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+}
+header .banner p {
+  font-size: 30px;
+  color: #e98b6c;
+  font-weight: 300;
+}
+header .banner a.button {
+  -moz-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  background-color: #e98b6c;
+  border: 0;
+  border-radius: 0;
+  color: #fff;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: bold;
+  height: 50px;
+  letter-spacing: 0.05em;
+  line-height: 50px;
+  padding: 0 26px;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+h2.bef {
+  text-align: center;
+  color: #525159;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+h2.bef span {
+  display: inline-block;
+  position: relative;
+  margin: 0 10px;
+}
+h2.bef span.light:before,
+h2.bef span.light:after {
+  background-image: url("../image/header-major-on-light.svg");
+}
+h2.bef span.dark:before,
+h2.bef span.dark:after {
+  background-image: url("../image/header-major-on-dark.svg");
+}
+h2.bef span:before,
+h2.bef span:after {
+  background-repeat: no-repeat;
+  content: '';
+  display: inline-block;
+  height: 20px;
+  width: 150px;
+  margin: 0 40px;
+}
+h2.bef span:after {
+  -moz-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+.wrap-1 {
+  background-color: #f5f5f5;
+}
+.wrap-1 p {
+  color: #8f8f8f;
+  text-align: center;
+}
+.wrap-1 .item {
+  text-align: center;
+  padding: 20px;
+}
+.wrap-1 .item .item-in {
+  background-color: #fff;
+  padding: 20px;
+}
+.wrap-1 .item .image {
+  background-image: -moz-linear-gradient(45deg, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0) 0%);
+  background-image: -webkit-linear-gradient(45deg, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0) 0%);
+  background-image: -o-linear-gradient(45deg, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0) 0%);
+  background-image: -ms-linear-gradient(45deg, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0) 0%);
+  background-image: linear-gradient(45deg, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0) 0%);
+  background-color: #e98b6c;
+  width: 60px;
+  height: 60px;
+  display: block;
+  color: #fff;
+  margin: 0 auto;
+  line-height: 60px;
+  font-size: 30px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+.wrap-1 .item h3 {
+  color: #555;
+  text-transform: uppercase;
+}
+.wrap-2 {
+  background-color: #e98b6c;
+  color: #fff;
+}
+.wrap-2 h2 {
+  color: inherit;
+}
+.wrap-2 .item {
+  padding: 20px;
+}
+.wrap-2 .item .item-in {
+  padding: 20px 40px;
+  background-color: rgba(235,151,123,0.9);
+}
+.wrap-2 .image {
+  background-image: -moz-linear-gradient(45deg, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0) 0%);
+  background-image: -webkit-linear-gradient(45deg, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0) 0%);
+  background-image: -o-linear-gradient(45deg, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0) 0%);
+  background-image: -ms-linear-gradient(45deg, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0) 0%);
+  background-image: linear-gradient(45deg, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0) 0%);
+  background-color: #596571;
+  width: 60px;
+  height: 60px;
+  display: block;
+  color: #fff;
+  margin: 0 auto;
+  line-height: 60px;
+  font-size: 30px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+.wrap-3 {
+  background-color: #fff;
+}
+.wrap-3 .item {
+  padding: 40px 20px;
+}
+.wrap-3 .item img,
+.wrap-3 .item h3,
+.wrap-3 .item p {
+  padding: 0;
+  margin: 0;
+  padding-bottom: 10px;
+}
+.wrap-3 .item img {
+  width: 100%;
+  height: 173px;
+}
+.wrap-3 .item h3 {
+  text-transform: uppercase;
+  color: #525159;
+}
+.wrap-3 .item p {
+  font-size: 14px;
+}
+.wrap-3 .item p a {
+  padding: 8px 30px;
+  font-weight: 900;
+  text-transform: uppercase;
+  display: inline-block;
+  box-shadow: inset 0 0 0 2px #ddd;
+  color: #333;
+  text-decoration: none;
+  font-size: 15px;
+}
+.wrap-3 .item p a:hover {
+  background-color: #f0f0f0;
+}
+.wrap-4 {
+  background-color: #f5f5f5;
+}
+.wrap-4 .form {
+  background-color: #fff;
+  padding: 20px;
+}
+.wrap-4 .form .mb {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.wrap-4 .form form {
+  padding: 10px 0;
+  margin: 0;
+}
+.wrap-4 .form form input.text,
+.wrap-4 .form form textarea {
+  margin-bottom: 30px;
+  width: 100%;
+  display: block;
+  font: inherit;
+  padding: 10px;
+  border: 2px solid #e6e6e6;
+  outline: none;
+}
+.wrap-4 .form form input.text:focus,
+.wrap-4 .form form textarea:focus {
+  border-color: #cfcfcf;
+}
+.wrap-4 .form form input[type="submit"],
+.wrap-4 .form form input[type="reset"] {
+  display: inline-block;
+  margin-right: 10px;
+  height: 44px;
+  line-height: 44px;
+  padding: 0 18px;
+  background: none;
+  border: none;
+  outline: none;
+  font: inherit;
+}
+.wrap-4 .form form input[type="submit"] {
+  background: #e98b6c;
+  color: #fff;
+}
+.wrap-4 .form form input[type="reset"] {
+  box-shadow: 0 0 0 2px #e6e6e6 inset;
+}
+.wrap-4 .form ul {
+  list-style: none;
+}
+.wrap-4 .form ul li {
+  text-align: left;
+  position: relative;
+  padding: 10px 0 10px 40px;
+}
+.wrap-4 .form ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+.wrap-4 .form ul li .capt {
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  tap: 0;
+}
+.wrap-4 .form ul li .capt i {
+  background-color: #808080;
+  border-radius: 100%;
+  color: #fff;
+  line-height: 26px;
+  text-align: center;
+  width: 26px;
+  height: 26px;
+}
+.wrap {
+  padding: 40px;
+  text-align: center;
+}
+footer {
+  background-color: #ececec;
+  color: #8f8f8f;
+  padding: 40px 0;
+  line-height: 24px;
+}
+footer ul {
+  list-style: none;
+}
+footer ul li {
+  display: inline-block;
+  border-right: 1px solid #8f8f8f;
+}
+footer ul li:last-of-type {
+  border-right: none;
+}
+footer ul li a {
+  color: inherit;
+  padding: 0 15px;
+}
+footer p.copy {
+  color: #b6b6b6;
+}
+@media screen and (max-width: 600px) {
+  h2.bef span:before,
+  h2.bef span:after {
+    display: none;
+  }
+  .wrap {
+    padding: 5px;
+  }
+  header nav {
+    float: none !important;
+    clear: both;
+  }
+  header nav ul li {
+    display: block;
+  }
+  header nav ul li ul.dropdown {
+    position: static;
+    width: auto;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  h2.bef span:before,
+  h2.bef span:after {
+    display: none;
+  }
+  .wrap {
+    padding: 5px;
+  }
+}

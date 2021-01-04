@@ -1,0 +1,146 @@
+html, body {
+	padding: 0;
+	margin: 0;
+}
+
+
+$support-old-br: false;
+$grid-padding: 15px;
+$grid-count: 12;
+
+$row-name: 'row';
+
+
+
+
+// $xs: auto;
+$xs-min: 0;
+$xs-max: 768px;
+
+// $sm: 768px;
+$sm-min: 768px;
+$sm-max: 992px;
+
+// $md: 992px;
+$md-min: 992px;
+$md-max: 1200px;
+
+// $lg: 1200px;
+$lg-min: 1200px;
+$lg-max: auto;
+
+
+@mixin more($name) {
+	.#{$name}-center {
+		display: block !important;
+		text-align: center;
+		margin: 0 auto;
+	}
+	.#{$name}-pull-0 		{ right: 0; }
+	.#{$name}-push-0 		{ left: 0; }
+	.#{$name}-offset-0 		{ margin-left: 0; }
+	.#{$name}-i-block 		{ display: inline-block !important; }
+	.#{$name}-hidden 		{ display: none !important; }
+	.#{$name}-visible 		{ display: block !important; }
+	.#{$name}-text-center 	{ text-align: center; }
+	.#{$name}-fixed 		{ position: fixed; }
+	.#{$name}-not-fixed 	{ position: static; }
+
+}
+
+@mixin classes() {
+	@if $support-old-br != true {
+		* {
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+	}
+	.#{$row-name} {
+		width: auto;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.#{$row-name}-full {
+		width: 100%;
+	}
+	.#{$row-name}-full:before,
+	.#{$row-name}-full:after,
+	.#{$row-name}:before,
+	.#{$row-name}:after {
+	  display: table;
+	  content: " ";
+	}
+	.#{$row-name}-full:after,
+	.#{$row-name}:after {
+		content: "";
+		clear: both;
+		display: block;
+		height: 0;
+		font-size: 0;
+		visibility: hidden;
+	}
+	.cfix:after {
+		content: "";
+		clear: both;
+		display: block;
+		height: 0;
+		font-size: 0;
+		visibility: hidden;
+	}
+	.fl-l { float: left; }
+	.fl-r { float: right; }
+	.center { margin-left: auto; margin-right: auto; clear: both; float: none !important; }
+	.text-center { text-align: center; }
+	.text-left { text-align: left; }
+	.text-right { text-align: right; }
+}
+
+@mixin MakeGrid($name, $min, $max) {
+
+	@if $min == 0 or $min == auto { $min: 0; }
+	@if $max == auto { $max: 100%; }
+
+	@media screen and (min-width: $min) {
+		@if $min != 0 {
+			.#{$row-name} {
+				width: round($min - ($min - ($min / 1.02564103)));
+			}
+		}
+
+		@for $i from 1 through $grid-count {
+
+			.#{$name}-#{$i} {
+				float: left;
+				width: (100% / $grid-count) * $i;
+
+				@if $support-old-br != true and $grid-padding {
+					padding-left: $grid-padding;
+					padding-right: $grid-padding;
+				}
+			}
+			.#{$name}-pull-#{$i} {
+				right: (100% / $grid-count) * $i;
+			}
+			.#{$name}-push-#{$i} {
+				left: (100% / $grid-count) * $i;
+			}
+			.#{$name}-offset-#{$i} {
+				margin-left: (100% / $grid-count) * $i;
+			}
+
+		}
+	}
+
+	@media screen and (min-width: $min) and (max-width: $max) { 
+
+		@include more($name);
+
+	}
+}
+
+@include classes();
+@include MakeGrid('xs', $xs-min, $xs-max);
+@include MakeGrid('sm', $sm-min, $sm-max);
+@include MakeGrid('md', $md-min, $md-max);
+@include MakeGrid('lg', $lg-min, $lg-max);

@@ -1,0 +1,402 @@
+
+theme-color = #e98b6c
+
+
+ul, li
+	padding 0
+	margin 0
+
+
+@import url("//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic");
+
+html, body
+	font-family "Source Sans Pro", Helvetica, sans-serif
+	font-size 13pt
+	font-weight 400
+	line-height 1.65em
+	color #808080
+	width 100%
+	height 100%
+
+header
+	color #fff
+	font-weight bold
+	min-height 450px
+	background #3a3347 url('../image/banner.svg') repeat-x 25% bottom
+	background-size 1125px 225px
+
+	.logo, nav ul li a
+		padding 20px
+
+	.logo a
+		text-transform uppercase
+		text-decoration none
+		color inherit
+
+	nav ul
+		list-style none
+
+		li
+			display inline-block
+			text-transform uppercase
+			position relative
+
+			ul.dropdown
+				position absolute
+				display none
+				right 0
+				left 0
+				top 100%
+				background-color #fff
+				-webkit-border-radius 4px
+				-moz-border-radius 4px
+				-ms-border-radius 4px
+				-o-border-radius 4px
+				border-radius 4px
+
+				li
+					display block
+					padding 5px 10px
+					color #333
+					font-size 14px
+					overflow hidden
+
+					a
+						padding 0
+
+					&:hover
+						background-color theme-color
+
+			a
+				display block
+				color inherit
+				text-decoration none
+
+				&:hover
+					i
+						opacity 1
+
+				i
+					margin-right 5px
+					color #fff
+					opacity .4
+
+	.banner
+		color inherit
+		padding 40px 0
+		text-align center
+
+		h2, p
+			line-height 1.3em
+
+		h2
+			font-size 42px
+			font-weight 900
+			letter-spacing 0.1em
+
+		p
+			font-size 30px
+			color theme-color
+			font-weight 300
+
+		a.button
+			-moz-transition all 0.2s ease-in-out
+			-webkit-transition all 0.2s ease-in-out
+			-o-transition all 0.2s ease-in-out
+			-ms-transition all 0.2s ease-in-out
+			transition all 0.2s ease-in-out
+			background-color theme-color
+			border 0
+			border-radius 0
+			color #ffffff
+			display inline-block
+			font-size 15px
+			font-weight bold
+			height 50px
+			letter-spacing 0.05em
+			line-height 50px
+			padding 0 26px
+			text-decoration none
+			text-transform uppercase
+			white-space nowrap
+
+
+h2.bef
+	text-align center
+	color #525159
+	font-weight bold
+	text-transform uppercase
+
+	span
+		display inline-block
+		position relative
+		margin 0 10px
+
+		&.light:before, &.light:after
+			background-image url("../image/header-major-on-light.svg")
+		&.dark:before, &.dark:after
+			background-image url("../image/header-major-on-dark.svg")
+
+		&:before, &:after
+			background-repeat no-repeat
+			content ''
+			display inline-block
+			height 20px
+			width 150px
+			margin 0 40px
+
+		&:after
+			-moz-transform: scaleX(-1);
+			-webkit-transform: scaleX(-1);
+			-o-transform: scaleX(-1);
+			-ms-transform: scaleX(-1);
+			transform: scaleX(-1);
+
+.wrap-1
+	background-color #f5f5f5
+
+	p
+		color #8f8f8f
+		text-align center
+
+	.item
+		text-align center
+		padding 20px
+
+		.item-in
+			background-color #fff
+			padding 20px
+
+		.image
+			background-image -moz-linear-gradient(45deg, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0) 0%)
+			background-image -webkit-linear-gradient(45deg, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0) 0%)
+			background-image -o-linear-gradient(45deg, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0) 0%)
+			background-image -ms-linear-gradient(45deg, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0) 0%)
+			background-image linear-gradient(45deg, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0) 0%)
+			background-color theme-color
+			width 60px
+			height 60px
+			display block
+			color #fff
+			margin 0 auto
+			line-height 60px
+			font-size 30px
+			-webkit-border-radius 50%
+			-moz-border-radius 50%
+			border-radius 50%
+
+		h3
+			color #555555
+			text-transform uppercase
+
+
+.wrap-2
+	background-color theme-color
+	color #fff
+
+	h2
+		color inherit
+
+	.item
+		padding 20px
+		.item-in
+			padding 20px 40px
+			background-color lighten(rgba(233, 139, 108, .9), 10%)
+
+	.image
+		background-image -moz-linear-gradient(45deg, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0) 0%)
+		background-image -webkit-linear-gradient(45deg, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0) 0%)
+		background-image -o-linear-gradient(45deg, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0) 0%)
+		background-image -ms-linear-gradient(45deg, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0) 0%)
+		background-image linear-gradient(45deg, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0) 0%)
+		background-color #596571
+		width 60px
+		height 60px
+		display block
+		color #fff
+		margin 0 auto
+		line-height 60px
+		font-size 30px
+		-webkit-border-radius 50%
+		-moz-border-radius 50%
+		border-radius 50%
+
+
+.wrap-3
+	background-color #fff
+
+	.item
+		padding 40px 20px
+
+		img, h3, p
+			padding 0
+			margin 0
+			padding-bottom 10px
+
+		img
+			width 100%
+			height 173px
+
+		h3
+			text-transform uppercase
+			color #525159
+
+		p
+			font-size 14px
+
+		p a
+			padding 8px 30px
+			font-weight 900
+			text-transform uppercase
+			display inline-block
+			box-shadow inset 0 0 0 2px #ddd
+			color #333
+			text-decoration none
+			font-size 15px
+
+			&:hover
+				background-color #f0f0f0
+
+
+.wrap-4
+	background-color #f5f5f5
+
+	.form
+		background-color #fff
+		padding 20px
+
+		.mb
+			padding-top 10px
+			padding-bottom 10px
+
+		form
+			padding 10px 0
+			margin 0
+
+			input.text,
+			textarea
+				margin-bottom 30px
+				width 100%
+				display block
+				font inherit
+				padding 10px
+				border 2px solid #e6e6e6
+				outline none
+
+				&:focus
+					border-color darken(#e6e6e6, 10%)
+
+			input[type="submit"],
+			input[type="reset"]
+				display inline-block
+				margin-right 10px
+				height 44px
+				line-height 44px
+				padding 0 18px
+				background none
+				border none
+				outline none
+				font inherit
+
+			input[type="submit"]
+				background theme-color
+				color #fff
+
+			input[type="reset"]
+				box-shadow 0 0 0 2px #e6e6e6 inset
+
+		ul
+			list-style none
+
+			li
+				text-align left
+				position relative
+				padding 10px 0 10px 40px
+
+				a
+					text-decoration none
+					color inherit
+
+				.capt
+					display inline-block
+					position absolute
+					left 0
+					tap 0
+
+					i
+						background-color #808080
+						border-radius 100%
+						color #fff
+						line-height 26px
+						text-align center
+						width 26px
+						height 26px
+
+
+
+.wrap
+	padding 40px
+	text-align center
+
+
+footer
+	c = #8f8f8f
+	background-color #ececec
+	color c
+	padding 40px 0
+	line-height 24px
+
+	ul
+		list-style none
+
+		li
+			display inline-block
+			border-right 1px solid c
+
+
+			&:last-of-type
+				border-right none
+
+			a
+				color inherit
+				padding 0 15px
+
+	p.copy
+		color lighten(c, 35%)
+
+
+
+@media screen and (max-width: 600px)
+
+	h2.bef span:before, h2.bef span:after
+		display none
+
+	.wrap
+		padding 5px
+
+	header nav
+		float none !important
+		clear both
+
+		ul li
+			display block
+
+			ul.dropdown
+				position static
+				width auto
+
+
+@media screen and (min-width: 768px) and (max-width: 992px)
+
+	h2.bef span:before, h2.bef span:after
+		display none
+
+	.wrap
+		padding 5px
+
+
+@media screen and (min-width: 992px) and (max-width: 1200px)
+	// some
+
+@media screen and (min-width: 1200px) and (max-width: 100%)
+	// some
